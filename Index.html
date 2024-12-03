@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login.css">
+    <title>Login</title>
+
+</head>
+<body>
+  <div class="cantinho"><img src="/Img-Site/RDA.png" alt="logo rda">
+  <div class="paragrafos">
+    <p>Registro Digital</p>
+    <p>do Aluno</p>
+  </div>
+</div>
+
+  <!-- Vídeo de Fundo -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="Video/UpscaleVideo_4_20240927.mp4" type="video/mp4">
+  </video>
+  </div>
+  
+    <!-- CODIGO UI -->
+    <div class="loginCSS-Index">
+      <form class="form">
+          <div class="olaLogin">
+            <label>Login </label>
+            <p style="
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+        ">Bem-vindo(a) ao Registro do Aluno SENAI-SP</p></div>
+            <div class="flex-column">
+              <label>Usuário </label></div>
+              <input type="text" id="nome-login" class="input-login" placeholder="Insira seu Nome:" autocomplete="off" oninput="transformarMaiusculas()">
+           
+      
+          <div class="flex-column">
+            <label>Senha </label></div>
+              <input type="text" id="rg-login"  class="input-login" placeholder="Insira sua Senha:" required oninput="formatarRG()" maxlength="12">
+       
+          <button class="button-submit" type="button" onclick="buscarExibirAluno()">Entrar</button>
+      
+      </button></div></form>
+    </div>
+    <!-- CODIGO UI -->
+
+    
+    
+    <!-- CODIGO ORIGINAL -->
+    <!-- <main>
+        <div class="container">
+            <h1>Login</h1>
+            
+                <div class="form-group">
+                    <input type="text" id="nome-login" placeholder="Nome:" autocomplete="off" oninput="transformarMaiusculas()">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="rg-login" placeholder="RG:" required oninput="formatarRG()" maxlength="12"/>
+                </div>
+                <button onclick="buscarExibirAluno()">Entrar</button>
+            </form>
+
+            <a href="/PaginaDesktop.html">Cadastro</a>
+            
+        </div>
+        
+    </main> -->
+    <!-- CODIGO ORIGINAL -->
+
+    <footer>
+      <p class="rodape">SENAI-SP - 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

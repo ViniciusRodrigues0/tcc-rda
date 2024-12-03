@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDA Config</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header"><img src="/Img-Site/RDA.png" alt="Logo"></div>
+    </header>
+
+    <h1>Configurações</h1>
+
+    <p class="geral">Ajuda</p>
+
+    <div class="caixaConfig" id="ajuda">
+
+        <div class="rotulo">
+            <img id="pergunta" src="/Img-Site/pergunta.png" alt="">
+            <a href="/perguntas.html"><p style="margin-left: 3px; margin-right: 5px;">Perguntas e Respostas</p></a>
+            <p id="veja">Veja perguntas e respostas frequentes</p>
+        </div>
+
+
+        <div class="rotulo">
+            <img id="qrcode" src="/Img-Site/qrcode.png" alt="">
+            <a href="/tutorialqr.html"><p style="margin-left: 3px; margin-right: 5px;">Tutorial QR Code</p></a>
+            <p id="veja">Veja como usar o leitor em seu aplicativo móvel</p>
+        </div>
+
+
+        <div class="rotulo">
+            <img id="docs" src="/Img-Site/docs.png" alt="">
+            <a href="/termosdeuso.html"><p style="margin-left: 3px; margin-right: 5px;">Termos de Uso</p></a>
+            <p id="veja">Veja nossos Termos de Uso</p>
+        </div>
+    
+    </div>
+
+    <br><br>
+
+    <p class="geral">Segurança</p>
+
+    <div class="caixaConfig" id="seguranca">
+
+        <div class="rotulo">
+            <img id="biometria" src="/Img-Site/biometria.png" alt="">
+            <p style="margin-left: 3px;">Desbloquear com biometria/digital</p>
+        </div>
+
+        
+        <div class="rotulo">
+            <img id="sair" src="/Img-Site/sair.png" alt="">
+            <p  id="sair-app" onclick="sair()" >Sair do app</p>
+        </div>
+        
+    </div>
+
+    <footer>
+        <div class="box">
+            <a href="/Carterinha.html"><img src="/Img-Site/casa (1).png" alt="Página Carterinha"></a>
+        </div>
+
+        <div class="box">
+            <a href="/notificacao.html"><img src="/Img-Site/schedule.png" alt="Página Notificações"></a>
+        </div>
+
+        <div class="box">
+            <a href="/configuraçoes.html"><img src="/Img-Site/engrenagem (1).png" alt="Página Configurações"></a>
+        </div>
+    </footer>
+
+
+    <script>
+        // Função sair
+        function sair() {
+            Swal.fire({
+                title: "Você tem certeza?",
+                text: "Você não poderá reverter essa ação!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Sim, sair!",
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Desconectado!",
+                        text: "Você saiu do aplicativo com sucesso.",
+                        icon: "success"
+                    });
+                    window.location.href = '/Index.html';
+                }
+            });
+        }
+
+    </script>
+
+    <script src="/script.js"></script>
+
+
+   
+</body>
+</html>

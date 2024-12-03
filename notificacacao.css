@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    height: 100vh; /* Altura total da tela */
+    overflow-y: auto; /* Habilita rolagem vertical no body */
+    margin: 0;
+    margin-bottom: 200px;
+}
+
+/* Oculta a barra de rolagem no Webkit */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.calendar-container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.months-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.month {
+    background-color: #f0e6e6;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.month h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 5px;
+    text-align: center;
+}
+
+.green { background-color: #b7e1cd; }
+.red { background-color: #f4cccc; }
+.yellow { background-color: #ffe599; }
+.orange { background-color: #f6b26b; } 
+.white { background-color: #ffffff; color: #000; } 
+.gray { background-color: #d9d9d9; }
+.purple { background-color: #830083a2; }
+
+ul {
+    text-align: left;
+    font-size: 0.9em;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+/* Rodapé */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #e63946;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .box {
+    text-align: center;
+    min-width: 60px;
+}
+
+footer .box img {
+    width: 50px;
+    height: 50px;
+}
+
+.rodapeSenai {
+    width: auto;
+}
+
+.rodapeSenai img {
+    width: 100%;
+    border-radius: 7px;
+    margin-top: 25px;
+}
+
+/* Media query para telas menores */
+@media (max-width: 900px) {
+    .months-container {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas para telas menores */
+    }
+
+    body {
+        margin-bottom: 700px;
+    }
+}
+
+@media (max-width: 600px) {
+    .months-container {
+        grid-template-columns: 1fr; /* Uma coluna para telas ainda menores */
+    }
+
+    body {
+        margin-bottom: 2150px;
+    }
+}

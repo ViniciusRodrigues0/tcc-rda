@@ -1,0 +1,655 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-bottom: 80px;
+}
+
+/* Oculta a barra de rolagem */
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+.pelicula, .caixa {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.caixa {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-image: url(/Img-Site/image\ \(1\).png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: auto;
+}
+
+.caixaConfig {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 20px;
+    width: auto;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 7px;
+}
+
+.caixa img.imagem-aluno {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: #fff solid;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.senai-logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.institution {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.info, .details {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.details p, #nome-aluno {
+    font-weight: bold;
+}
+
+.student-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+span {
+    display: block;
+    color: #999;
+    font-size: 0.9em;
+    margin-top: 2px;
+}
+
+.dadosCarteira {
+    margin-top: 10px;
+}
+
+.qr-code img {
+    max-width: 130px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.qr-code {
+    display: flex;
+    align-items: center;
+}
+
+.geral {
+    font-weight: bold;
+    margin: 20px 10px 5px 10px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.rotulo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+}
+
+.rotulo img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.rotulo p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #e63946;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .box {
+    text-align: center;
+    min-width: 60px;
+}
+
+footer .box img {
+    width: 50px;
+    height: 50px;
+}
+
+.rodapeSenai {
+    width: auto;
+}
+
+.rodapeSenai img {
+    width: 100%;
+    border-radius: 7px;
+    margin-top: 25px;
+}
+
+#sair-app {
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .caixa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixa img.imagem-aluno {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .senai-logo img {
+        max-width: 80px;
+    }
+
+    .institution {
+        text-align: center;
+    }
+
+    #veja, #veja2 {
+        margin-left: 10px;
+        font-size: 0.8em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .geral {
+        font-size: 1em;
+    }
+
+    footer .box img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px), (max-height: 600px) {
+    .card {
+        margin: 0 auto;
+        margin-top: 25px;
+        padding: 10px;
+        margin-bottom: 100px;
+    }
+
+    .senai-logo img {
+        max-width: 60px;
+    }
+
+    .qr-code img {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .institution {
+        font-size: 1em;
+    }
+
+    .student-name {
+        font-size: 1em;
+    }
+
+    .dadosCarteira p {
+        font-size: 0.9em;
+    }
+
+    .rotulo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rotulo img {
+        margin-bottom: 5px;
+        width: 20px;
+        height: 20px;
+    }
+
+    footer .box img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.caixa-rodape {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: auto;
+    justify-content: center;
+}
+
+.caixa-rodape img {
+    height: auto;
+    max-width: 380px;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.adm {
+    display: flex;
+    width: 750px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 225px;
+}
+
+.adm button {
+    background-color: #fd3b2e;
+    border: none;
+    color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admBG {
+    background-color: #eeeeee6c;
+}
+
+#termos {
+    max-width: 900px;
+    max-height: 1430px;
+    margin: 40px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    padding: 30px 10px 60px 10px;
+    font-size: 1.0625rem;
+}
+
+#termos h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+}
+
+#termos p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+#termos h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.topicos {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tutorial QR-Code */
+.informaçoes {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.informaçoes h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.informaçoes h4 {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#Video {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#Video video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos adicionais */
+.detailsEsquerda {
+    padding-right: 80px;
+}
+
+.detailsDireita {
+    padding-right: 30px;
+}
+
+#cardAluno .card {
+    padding: 20px;
+}
+
+.cardDelete {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+    border: burlywood solid;
+    width: 300px;
+}
+
+.cardDelete #imagem-aluno {
+    width: 50%;
+}
+
+.deletaimg {
+    width: 30px;
+    border: #fff solid;
+    border-radius: 100%;
+}
+
+.caixaDelete {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-image: url(/Img-Site/image\ \(1\).png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: auto;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.caixaDelete img.imagem-aluno {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: #fff solid;
+}
+
+#divBusca input {
+    border-radius: 7px;
+    font-size: larger;
+    background-color: #f4f4f4;
+    width: 400px;
+    height: 25px;
+    border: #d7d7d7 solid 2px;
+}
+
+#divBusca {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#deleta img {
+    width: 10px;
+}
+
+.caixaAtualiza {
+    width: 450px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 7px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+    height: 515px;
+}
+
+.atualiza {
+    display: flex;
+}
+
+.cardAtualiza {
+    max-width: 400px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+.caixaAtualiza input {
+    height: 35px;
+    border-radius: 7px;
+    border: solid #ccc 2px;
+}
+
+.caixaAtualiza select {
+    height: 35px;
+    border-radius: 7px;
+    border: solid #ccc 2px;
+}
+
+.caixaAtualiza label {
+    margin: 10px;
+    font-size: large;
+}
+
+.sectionAtualiza {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.caixaAtualiza button {
+    height: 40px;
+    width: 200px;
+    border-radius: 7px;
+    border: none;
+    margin-top: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #e63946;
+    color: #fff;
+}
+
+.formAtualiza {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.infoAtualiza, .detailsAtualiza {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.detailsAtualiza p, #nome-aluno {
+    font-weight: bold;
+}
+
+.pelicula, .caixa {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pergunta{
+    border-radius: 7px;
+    margin-top: 10px;
+    background-color: #e6444b;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+    display: flex;
+    margin: 10px;
+    padding: 15px;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: medium;
+    color: white;
+}
+
+.resposta{
+    border-radius: 7px;
+    margin-top: 15px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+    background-color: #ebebeb;
+    margin: 10px;
+    padding: 20px;
+}
+
+.containerPergunta{
+    border-radius: 7px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 15px;
+}
+
+.pergunta img{
+    width: 50px;
+    height: 50px;
+}
+
+#imagem{
+    border: none;
+}
+
+/* input[type="file"]{
+    display: none;
+} */
+
+a{
+    text-decoration: none;
+    color: black;
+}
+label{
+    font-weight: bold;
+}
+.rotulo p{
+    font-weight: bold;
+}
+#veja{
+    font-weight: 300;
+    font-size: 13px;
+}

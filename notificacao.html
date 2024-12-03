@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações</title>
+    <link rel="stylesheet" href="notificacacao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <div class="calendar-container">
+        <h1>2° semestre 2024</h1>
+        <div class="months-container">
+            <div class="month">
+                <h2>Julho</h2>
+                <table>
+                    <tr><th>D</th><th>S</th><th>T</th><th>Q</th><th>Q</th><th>S</th><th>S</th></tr>
+                    <tr><td></td><td class="green">1</td><td class="green">2</td><td class="green">3</td><td class="green">4</td><td class="green">5</td><td class="green">6</td></tr>
+                    <tr><td class="gray">7</td><td class="red">8</td><td class="red">9</td><td class="green">10</td><td class="green">11</td><td class="green">12</td><td class="green">13</td></tr>
+                    <tr><td class="gray">14</td><td class="green">15</td><td class="white">16</td><td class="white">17</td><td class="white">18</td><td class="white">19</td><td class="orange">20</td></tr>
+                    <tr><td class="gray">21</td><td class="white">22</td><td class="white">23</td><td class="yellow">24</td><td class="yellow">25</td><td class="red">26</td><td class="orange">27</td></tr>
+                    <tr><td class="gray">28</td><td class="yellow">29</td><td class="yellow">30</td><td class="yellow">31</td><td></td><td></td><td></td></tr>
+                </table>
+                <ul>
+                    <li>01 a 15 - Férias dos Professores, Instrutores e Técnicos de Ensino</li>
+                    <li>09 - Expediente Suspenso - Compensado (29/06/2024)</li>
+                    <li>20 - Feriado Estadual - Revolução Constitucionalista</li>
+                    <li>23 a 26 - Acolhimento e Rematrícula dos Cursos - CAI e CT</li>
+                    <li>31 - Prazo para Pedidos de Aproveitamento de Estudos</li>
+                    <li>26 - Feriado Municipal - Dia Sant’Ana - Padroeira</li>
+                </ul>
+            </div>
+            
+            
+            <div class="month">
+                <h2>Agosto</h2>
+                <table>
+                    <tr><th>D</th><th>S</th><th>T</th><th>Q</th><th>Q</th><th>S</th><th>S</th></tr>
+                    <tr><td></td><td></td><td></td><td></td><td class="yellow">1</td><td class="yellow">2</td><td class="orange">3</td></tr>
+                    <tr><td class="gray">4</td><td class="yellow">5</td><td class="yellow">6</td><td class="yellow">7</td><td class="yellow">8</td><td class="yellow">9</td><td class="orange">10</td></tr>
+                    <tr><td class="gray">11</td><td class="yellow">12</td><td class="yellow">13</td><td class="yellow">14</td><td class="yellow">15</td><td class="yellow">16</td><td class="orange">17</td></tr>
+                    <tr><td class="gray">18</td><td class="yellow">19</td><td class="yellow">20</td><td class="yellow">21</td><td class="yellow">22</td><td class="yellow">23</td><td class="orange">24</td></tr>
+                    <tr><td class="gray">25</td><td class="yellow">26</td><td class="yellow">27</td><td class="yellow">28</td><td class="yellow">29</td><td class="yellow">30</td><td class="orange">31</td></tr>
+                </table>
+                <ul>
+                    <li>09 - Reunião da Equipe Escolar</li>
+                    <li>19 - Reunião Técnico Pedagógica</li>
+                </ul>
+            </div>
+
+
+            <div class="month">
+                <h2>Setembro</h2>
+                <table>
+                    <tr><th>D</th><th>S</th><th>T</th><th>Q</th><th>Q</th><th>S</th><th>S</th></tr>
+                    <tr><td class="red">1</td><td class="yellow">2</td><td class="yellow">3</td><td class="yellow">4</td><td class="yellow">5</td><td class="yellow">6</td><td class="red">7</td></tr>
+                    <tr><td class="gray">8</td><td class="yellow">9</td><td class="yellow">10</td><td class="yellow">11</td><td class="yellow">12</td><td class="yellow">13</td><td class="orange">14</td></tr>
+                    <tr><td class="gray">15</td><td class="yellow">16</td><td class="yellow">17</td><td class="yellow">18</td><td class="yellow">19</td><td class="yellow">20</td><td class="orange">21</td></tr>
+                    <tr><td class="gray">22</td><td class="yellow">23</td><td class="yellow">24</td><td class="yellow">25</td><td class="yellow">26</td><td class="yellow">27</td><td class="white">28</td></tr>
+                    <tr><td class="gray">29</td><td class="yellow">30</td><td></td><td></td><td></td><td></td><td></td></tr>
+                </table>
+                <ul>
+                    <li>01 - Feriado Municipal - 464 Aniversário de Mogi das Cruzes</li>
+                    <li>02 a 06 - Reunião da Cipa e Brigada de Incêndio</li>
+                    <li>07 - Feriado Nacional - Independência do Brasil (Nacional)</li>
+                    <li>12 - Pagamento horas + 2h ref. 30/12/2024</li>
+                    <li>28 - Compensação - Dia Letivo Não Letivo - Compensação do Dia 14/10/2024</li>
+                    <li>30 - Reunião Técnico Pedagógico - Conselho de Classe - MSEP</li>
+                </ul>
+            </div>
+            
+
+            <div class="month">
+                <h2>Outubro</h2>
+                <table>
+                    <tr><th>D</th><th>S</th><th>T</th><th>Q</th><th>Q</th><th>S</th><th>S</th></tr>
+                    <tr><td></td><td></td><td class="yellow">1</td><td class="yellow">2</td><td class="yellow">3</td><td class="yellow">4</td><td class="orange">5</td></tr>
+                    <tr><td class="gray">6</td><td class="yellow">7</td><td class="yellow">8</td><td class="yellow">9</td><td class="yellow">10</td><td class="yellow">11</td><td class="red">12</td></tr>
+                    <tr><td class="gray">13</td><td class="red">14</td><td class="green">15</td><td class="yellow">16</td><td class="yellow">17</td><td class="yellow">18</td><td class="orange">19</td></tr>
+                    <tr><td class="gray">20</td><td class="yellow">21</td><td class="yellow">22</td><td class="white">23</td><td class="yellow">24</td><td class="yellow">25</td><td class="purple">26</td></tr>
+                    <tr><td class="gray">27</td><td class="yellow">28</td><td class="yellow">29</td><td class="yellow">30</td><td class="yellow">31</td><td></td><td></td></tr>
+                </table>
+                <ul>
+                    <li>02 - Pagamento horas + 2h ref. 30/12/2024</li>
+                    <li>03 - Análise da Execução dos Processos de Aprendizagem (5oDF)</li>
+                    <li>10 - Gestão da MSEP - Conselho de Classe</li>
+                    <li>12 - Feriado Nacional - Dia de Nossa Senhora Aparecida</li>
+                    <li>14 - Expediente Suspenso - Compensação (28/09/2024)</li>
+                    <li>15 - Comemoração do Dia dos Professores - Acordo Coletivo</li>
+                    <li>28 - Compensação do Dia 26/12/2024 (Dia Não Letivo)</li>
+                    <li>29 - Reunião Técnico Pedagógico</li>
+                </ul>
+            </div>
+
+
+            <div class="month">
+                <h2>Novembro</h2>
+                <table>
+                    <tr><th>D</th><th>S</th><th>T</th><th>Q</th><th>Q</th><th>S</th><th>S</th></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td class="yellow">1</td><td class="red">2</td></tr>
+                    <tr><td class="gray">3</td><td class="yellow">4</td><td class="yellow">5</td><td class="yellow">6</td><td class="yellow">7</td><td class="yellow">8</td><td class="orange">9</td></tr>
+                    <tr><td class="gray">10</td><td class="yellow">11</td><td class="yellow">12</td><td class="yellow">13</td><td class="yellow">14</td><td class="red">15</td><td class="orange">16</td></tr>
+                    <tr><td class="gray">17</td><td class="yellow">18</td><td class="yellow">19</td><td class="red">20</td><td class="yellow">21</td><td class="yellow">22</td><td class="orange">23</td></tr>
+                    <tr><td class="gray">24</td><td class="yellow">25</td><td class="yellow">26</td><td class="yellow">27</td><td class="yellow">28</td><td class="yellow">29</td><td class="orange">30</td></tr>
+                </table>
+                <ul>
+                    <li>01 - Reunião da Equipe Escolar</li>
+                    <li>02 - Feriado Nacional - Dia de Finados</li>
+                    <li>13 - Pagamento horas + 2h ref. 30/12/2024</li>
+                    <li>15 - Feriado Nacional - Dia da Proclamação da República</li>
+                    <li>20 - Feriado Nacional - Consciência Negra</li>
+                    <li>28 - Reunião da Cipa e Brigada de Incêndio</li>
+                </ul>
+            </div>                        
+
+            
+            <div class="month">
+                <h2>Dezembro</h2>
+                <table>
+                    <tr><th>D</th><th>S</th><th>T</th><th>Q</th><th>Q</th><th>S</th><th>S</th></tr>
+                    <tr><td class="gray">1</td><td class="yellow">2</td><td class="yellow">3</td><td class="yellow">4</td><td class="yellow">5</td><td class="yellow">6</td><td class="purple">7</td></tr>
+                    <tr><td class="gray">8</td><td class="yellow">9</td><td class="yellow">10</td><td class="yellow">11</td><td class="yellow">12</td><td class="yellow">13</td><td class="orange">14</td></tr>
+                    <tr><td class="gray">15</td><td class="yellow">16</td><td class="yellow">17</td><td class="yellow">18</td><td class="white">19</td><td class="white">20</td><td class="orange">21</td></tr>
+                    <tr><td class="gray">22</td><td class="purple">23</td><td class="red">24</td><td class="red">25</td><td class="purple">26</td><td class="purple">27</td><td class="orange">28</td></tr>
+                    <tr><td class="gray">29</td><td class="purple">30</td><td class="red">31</td><td></td><td></td><td></td><td></td></tr>
+                </table>
+                <ul id="dezembro">
+                    <li>02 a 06 - Apresentação dos Projetos para os CT</li>
+                    <li>07 - Compensação do Dia 27/12/2024 (Dia Não Letivo)</li>
+                    <li>10 - Conselho de Classe dos Cursos CAI e CT - Final</li>
+                    <li>13 - Pagamento horas + 2h ref. 31/12/2024</li>
+                    <li>20 - Fechamento do Portal Educacional</li>
+                    <li>23 - Feriado Nacional - Dia do Natal</li>
+                    <li>26 - Recesso dos Técnicos de Ensino e Professores</li>
+                    <li>23 a 30 - Plano de Compensação</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="box">
+            <a href="/Carterinha.html"><img src="/Img-Site/casa (1).png" alt="Página Carterinha"></a>
+        </div>
+
+        <div class="box">
+            <a href="/notificacao.html"><img src="/Img-Site/schedule.png" alt="Página Notificações"></a>
+        </div>
+
+        <div class="box">
+            <a href="/configuraçoes.html"><img src="/Img-Site/engrenagem (1).png" alt="Página Configurações"></a>
+        </div>
+    </footer>
+    
+</body>
+</html>

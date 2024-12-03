@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas E respostas</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="header"><img src="/Img-Site/RDA.png" alt="Logo"></div>
+    </header>
+
+    <div class="containerPergunta" style="
+    margin: 50px">
+        <h1>Perguntas Frequentes (FAQ)</h1>
+
+        <div class="pergunta">
+            <h3>Posso acessar o aplicativo em mais de um dispositivo?</h3>
+            <img src="/Img-Site/seta-para-baixo.png" class="seta">
+        </div>
+        <div class="resposta" id="resposta1">
+
+        </div>
+
+        <div class="pergunta">
+            <h3>O que fazer se encontrar um erro no aplicativo?</h3>
+            <img src="/Img-Site/seta-para-baixo.png" class="seta">
+        </div>
+        <div class="resposta" id="resposta2">
+
+        </div>
+
+        <div class="pergunta">
+            <h3>Posso usar o aplicativo offline?</h3>
+            <img src="/Img-Site/seta-para-baixo.png" class="seta">
+        </div>
+         <div class="resposta" id="resposta3">
+
+         </div>
+
+         <div class="pergunta">
+            <h3>Como faço para encerrar mminha conta?</h3>
+            <img src="/Img-Site/seta-para-baixo.png" class="seta">
+        </div>
+        <div class="resposta" id="resposta4">
+
+        </div>
+
+        <div class="pergunta">
+            <h3>O que fazer se a carterinha não estiver aparecendo?</h3>
+            <img src="/Img-Site/seta-para-baixo.png" class="seta">
+        </div>
+        <div class="resposta" id="resposta5">
+
+        </div>
+
+    </div>
+
+    <script>
+        // Respostas definidas em um array
+        const respostas = [
+            "Sim, você pode acessar sua conta em vários dispositivos, mas não compartilhe suas credenciais.",
+            "Se você encontrar um erro, entre em contato com nosso suporte técnico através do e-mail disponível no aplicativo.",
+            "Algumas funcionalidades requerem conexão à internet, mas você pode acessar sua carteirinha digital offline.",
+            "Para encerrar sua conta, entre em contato com nosso suporte e solicite a exclusão.",
+            "Tente atualizar a página ou reiniciar o aplicativo. Se o problema persistir, entre em contato com o suporte."
+        ];
+
+        // Seleciona todas as perguntas
+        const perguntas = document.querySelectorAll('.pergunta');
+
+        perguntas.forEach((pergunta, index) => {
+            pergunta.addEventListener('click', () => {
+                // Seleciona a div resposta correspondente
+                const respostaDiv = document.getElementById(`resposta${index + 1}`);
+
+                // Alterna a visibilidade da resposta
+                if (respostaDiv.style.display === "block") {
+                    respostaDiv.style.display = "none"; // Oculta a resposta
+                } else {
+                    respostaDiv.innerHTML = respostas[index]; // Define o conteúdo da resposta
+                    respostaDiv.style.display = "block"; // Mostra a div da resposta
+                }
+            });
+        });
+
+    </script>
+
+    <footer>
+        <div class="box">
+            <a href="/Carterinha.html"><img src="/Img-Site/casa (1).png" alt=""></a>
+        </div>
+
+        <div class="box">
+            <a href="/notificacao.html"><img src="/Img-Site/packard-bell (1).png" alt=""></a>
+        </div>
+
+        <div class="box">
+            <a href="/configuraçoes.html"><img src="/Img-Site/engrenagem (1).png" alt=""></a>
+        </div>
+    </footer>
+
+</body>
+</html>

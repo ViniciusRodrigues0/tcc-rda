@@ -1,0 +1,313 @@
+/* Reset básico de margens e preenchimentos */
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.divinoSection{
+    margin: 0 auto;
+}
+.caixa2 p {
+    border: none; /* Remove a borda */
+    margin: 10px 0; /* Ajuste o espaçamento se necessário */
+    padding: 0; /* Remove qualquer preenchimento que possa estar afetando a aparência */
+    color: #333; /* Ajuste a cor do texto se necessário */
+    font-weight: bold; /* Mantém o texto em negrito, se desejado */
+}
+
+body {
+    overflow: scroll; /* Mantém a rolagem habilitada */
+    scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */ 
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome, Safari e Edge */
+}
+
+/* Estilo para a seção geral */
+section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%; /* Ajuste da largura geral do container */
+    max-width: 1200px;
+    margin-top: 20px;
+    gap: 20px; /* Espaçamento entre as caixas */
+    flex-direction: row; /* Garantir que seja row para telas maiores */
+    align-items: stretch; /* Garante que as caixas tenham a mesma altura */
+}
+
+/* Estilo para a primeira caixa */
+.caixa {
+    width: 49%; /* Ocupar menos de 50% da largura para deixar espaço para a segunda caixa */
+    padding: 20px;
+    background: #F9F9F9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Para garantir que os itens dentro da caixa fiquem corretamente alinhados */
+}
+
+.caixa label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.caixa input[type="text"],
+.caixa input[type="date"],
+.caixa input[type="email"],
+.caixa input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Títulos das seções */
+h2, h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFAA00; /* Cor dourada para destaque */
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form {
+    width: 100%; /* Largura total para o formulário */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.qr-code {
+    display: none; /* Esconde a seção de QR Code na primeira caixa */
+}
+
+/* Estilo para os botões */
+button {
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #E60000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+/* Segunda caixa - inputs */
+.caixa2 {
+    width: 49%; /* Ocupar menos de 50% da largura */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Estilo para a imagem na caixa2 */
+.caixa2 img {
+    max-width: 100px; /* Tamanho da imagem ajustado */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* Centraliza a imagem e adiciona espaçamento inferior */
+}
+
+#logo {
+    max-width: 120px; /* Tamanho do logo ajustado */
+    margin: 10px auto; /* Centraliza o logo e adiciona espaçamento */
+}
+
+.caixa2 p {
+    margin: 10px 0;
+}
+
+.caixa2 hr {
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Cor da linha ajustada */
+}
+
+.caixa2 label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.caixa2 input[type="text"],
+.caixa2 input[type="date"],
+.caixa2 input[type="email"],
+.caixa2 input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.caixa2 input[type="text"]:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Oculta o botão de upload padrão */
+.input-file {
+    display: none;
+}
+
+/* Estilo para o botão customizado */
+.input-file-label {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.input-file-label:hover {
+    background-color: #555;
+}
+
+
+/* Centraliza a imagem da pessoa */
+#imagem-container img {
+    display: block;
+    margin: 10px auto; /* Centraliza a imagem horizontalmente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    width: 120px; /* Tamanho específico */
+    height: 120px; /* Tamanho específico */
+    object-fit: cover; /* Garante que a imagem se encaixe no container */
+}
+
+/* Estilo específico para o QR Code */
+.caixa2 .qr-code {
+    display: block; /* Garante que o QR Code seja exibido */
+    margin-top: 20px; /* Espaçamento superior */
+    width: 170px; /* Largura e altura iguais para criar uma caixa quadrada */
+    height: 170px;
+    margin: 0 auto; /* Centraliza a caixa do QR Code */
+}
+
+.caixa2 .qr-code img {
+    width: 100%; /* Ajusta a imagem para ocupar toda a caixa */
+    height: 100%; /* Mantém a proporção quadrada */
+    object-fit: contain; /* Garante que a imagem do QR Code se ajuste dentro da caixa */
+    background-color: #fff; /* Fundo branco */
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #e63946;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .box {
+    text-align: center;
+    min-width: 50px;
+}
+
+footer .box img {
+    width: 50px;
+    height: 50px;
+}
+.rodapeSenai{
+    width: auto;
+}
+.rodapeSenai img{
+    width: 100%;
+    border-radius: 7px;
+    margin-top: 25px;
+}
+.dob{
+    width: 60%;
+    
+}
+
+.pelicula {
+    height: auto;
+    width: 90%;
+    box-shadow: 0 4px 7px 7px rgba(0, 0, 0, 0.1);
+    padding-bottom: 25px;
+    margin-top: 10px;
+    padding-top: 7px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.box img {
+    width: 100px;
+
+}
+.box{
+    width: 50px;
+}
+
+/* Responsividade: Caixas empilhadas em telas menores */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column; /* Nas telas menores, caixas ficam empilhadas */
+        align-items: center;
+    }
+
+    .caixa, .caixa2 {
+        width: 100%; /* Ocupar 100% em telas menores */
+    }
+}
+.caixa2 img #caixa2-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: #fff solid;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão SENAI</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="/Img-Site/RDA.png" alt="Logo">
+    </header>
+
+    <div class="card">
+        <div class="caixa">
+            <img class="imagem-aluno" src="" alt="Imagem do Aluno">
+        </div>
+        
+        <hr>
+
+        <div class="info">
+            <div class="details">
+                <div class="detailsEsquerda">
+                    <div id="nome-aluno"></div>
+                    <span>Nome do Aluno</span>
+                    <div class="dadosCarteira">
+                        <p id="data-aluno"></p>
+                        <span>Data de Nascimento</span>
+                    </div>
+                </div>
+    
+                <div class="detailsDireita">
+                    <div class="dadosCarteira">
+                        <p id="uni-aluno"></p>
+                        <span>Unidade</span>
+                    </div>
+                    
+                    <div class="dadosCarteira">
+                        <p id="vali-aluno"></p>
+                        <span>validade</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+
+        <div class="qr-code">
+            <img src="" alt="QR Code">
+        </div>
+        
+        <div class="caixa-rodape">
+            <img src="Img-Site/image.png" alt="">
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="box">
+            <a href="/Carterinha.html"><img src="/Img-Site/casa (1).png" alt="Página Carterinha"></a>
+        </div>
+
+        <div class="box">
+            <a href="/notificacao.html"><img src="/Img-Site/schedule.png" alt="Página Notificações"></a>
+        </div>
+
+        <div class="box">
+            <a href="/configuraçoes.html"><img src="/Img-Site/engrenagem (1).png" alt="Página Configurações"></a>
+        </div>
+    </footer>
+
+
+        <script>
+            window.onload = function() {
+                const aluno = JSON.parse(localStorage.getItem('aluno'));
+                
+                if (aluno) {
+                    document.getElementById('nome-aluno').textContent = aluno.nome;
+                    document.getElementById('data-aluno').textContent = aluno.dataNascimento;
+                    document.getElementById('uni-aluno').textContent = aluno.unidade;
+            
+                    // Exibe a imagem do aluno
+                    if (aluno.fotoAluno) {
+                        document.querySelector('.imagem-aluno').src = aluno.fotoAluno;
+                    } else {
+                        document.querySelector('.imagem-aluno').src = '/Img-Site/default.jpg'; // Imagem padrão se não tiver foto
+                    }
+                    
+                    // Exibe o QR Code
+                    if (aluno.qrCode) {
+                        document.querySelector('.qr-code img').src = aluno.qrCode;
+                    } else {
+                        document.querySelector('.qr-code img').src = '/Img-Site/default-qr.png'; // QR code padrão se não tiver
+                    }
+            
+                    // Define a data atual
+                    const dataAtual = new Date();
+                    const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+                    const dataAtualFormatada = dataAtual.toLocaleDateString('pt-BR', options);
+            
+                    // Calcula a data de validade (6 meses a partir da data atual)
+                    const dataValidade = new Date();
+                    dataValidade.setMonth(dataAtual.getMonth() + 6);
+                    const dataValidadeFormatada = dataValidade.toLocaleDateString('pt-BR', options);
+            
+                    // Exibe as datas
+                    document.getElementById('vali-aluno').textContent = `${dataAtualFormatada} Até ${dataValidadeFormatada}`;
+                } else {
+                    alert('Nenhum dado do aluno encontrado.');
+                }
+            };
+        </script>
+   
+    <script src="script.js"></script>    
+</body>
+</html>
